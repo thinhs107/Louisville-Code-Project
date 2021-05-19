@@ -1,55 +1,91 @@
-* {box-sizing:border-box}
+* {
+  box-sizing: border-box;
+}
 
 /* Slideshow container */
 .slideshow-container {
   max-width: auto;
   position: relative;
   margin: auto;
-
 }
 
-.navbar{
-    position:relative;
-    display:flex;
-    flex-wrap:wrap;
-    align-items:center;
-    justify-content:space-between;
-    padding-top:.5rem;
-    padding-bottom:.5rem 
+.navbar {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
-.navbar-text a:hover{
-    color: lightblue
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
-nav a:visited, 
-nav a:link{
-    color: black;
-    text-decoration: none;
+.navbar-text a:hover {
+  color: lightblue;
 }
 
-nav > ul{
-    display: inline;
-    padding: 0;
+nav a:visited,
+nav a:link {
+  color: black;
+  text-decoration: none;
 }
 
-nav > ul >li {
-    display: inline-block;
-    list-style: none;
-    margin: 0 5px 0 5px;
+nav > ul {
+  display: inline;
+  padding: 0;
 }
 
-main{
-    display: block;
-    padding-top: 3em;
-    padding-bottom: 3em;
-    min-height: 85%;
+nav > ul > li {
+  display: inline-block;
+  list-style: none;
+  margin: 0 5px 0 5px;
 }
 
-.img-size{
-    width:100%;
-    height:100%;
- /*Scale down will take the necessary specified space that is 100px x 100px without stretching the image*/
+.round-image {
+  height: 150px;
+  width: 150px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.body-list {
+  list-style-type: none;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: #333;
+}
+
+.cover-heading {
+  font-size: 2.5rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  color: #ffffff;
+  display: block;
+  align-items: center;
+  text-align: center;
+}
+
+main {
+  display: block;
+  padding-top: 3em;
+  padding-bottom: 3em;
+  min-height: 85%;
+}
+
+.img-size {
+  width: 100%;
+  height: 100%;
+  /*Scale down will take the necessary specified space that is 100px x 100px without stretching the image*/
 }
 
 /* Make the images invisible by default */
@@ -58,7 +94,8 @@ main{
 }
 
 /* forward & Back buttons */
-.Back, .forward {
+.Back,
+.forward {
   cursor: pointer;
   position: absolute;
   top: 48%;
@@ -80,8 +117,9 @@ main{
 }
 
 /*when the user hovers,add a black background with some little opacity */
-.Back:hover, .forward:hover {
-  background-color: rgba(0,0,0,0.8);
+.Back:hover,
+.forward:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Caption Info */
@@ -93,6 +131,16 @@ main{
   bottom: 10px;
   width: 100%;
   text-align: center;
+}
+
+.bttn-info{
+    position: absolute;
+    justify-self: center;
+    background-color: #ffffff;
+    padding:  10px;
+    border: solid 1px rgb(51, 27, 51);
+    border-radius:  3px;
+    color: #fff;
 }
 
 /* Worknumbering (1/3 etc) */
@@ -116,7 +164,8 @@ main{
   transition: background-color 0.5s ease;
 }
 
-.enable, .dots:hover {
+.enable,
+.dots:hover {
   background-color: #717161;
 }
 
@@ -129,11 +178,19 @@ main{
 }
 
 @-webkit-keyframes fade {
-  from {opacity: .5}
-  to {opacity: 2}
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 2;
+  }
 }
 
 @keyframes fade {
-  from {opacity: .5}
-  to {opacity: 2}
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 2;
+  }
 }
