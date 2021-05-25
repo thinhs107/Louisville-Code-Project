@@ -12,30 +12,58 @@
     <nav>
       <ul>
         <li class="navbar-text"><a href="/Screens/Index.html">Home</a></li>
-        <li class="navbar-text"><a href="./Crypto.html">Crypto</a></li>
+        <li class="navbar-text"><a href="./Sports.html">Scores</a></li>
         <li class="navbar-text"><a href="./Contact.html">Contact</a></li>
+        <li class="navbar-text"><a href="./Weather.html">Weather</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <body class = "text-center">
+    <div class="quicklink">
+      <!--Quick Link-->
+      <nav>
+        <ul>
+          <li class="navbar-text">
+            <a href="https://www.youtube.com/watch?v=9KGzuckZ04c"
+              ><h5 class="quicklink-header">PODCAST:</h5>
+              NBA Podcast </a
+            >|
+          </li>
+          <li class="navbar-text">
+            <a href="./Crypto.html"
+              ><h5 class="quicklink-header">TRENDING:</h5>
+              5-5 pickup
+            </a>
+            |
+          </li>
+          <li class="navbar-text"><a href="./Contact.html">'Foo'</a> |</li>
+          <li class="navbar-text"><a href="./Weather.html">Bar</a> |</li>
+        </ul>
+      </nav>
+    </div>
+
+    <br />
+
+    <body class="text-center">
       <!-- Slideshow container -->
       <div class="slideshow-container fade">
         <!-- Full images with numbers and message Info -->
         <div class="Containers">
-          <img src="../assets/call-of-duty-resize.jpg" class="img-size" />
+          <img src="../assets/nba-logo-resize.jpg" class="img-size" />
           <div class="Info">First caption</div>
         </div>
 
         <div class="Containers">
-          <img src="../assets/cryptocurrency-resize.jpg" class="img-size" />
-          <button class = "bttn-info" target ="_blank" type="button">Learn more about Crypto</button>
+          <img src="../assets/louisville-images-resize.jpg" class="img-size" />
+          <button class="bttn-info" target="_blank" type="button">
+            Learn more about Crypto
+          </button>
           <div class="Info">Second Caption</div>
         </div>
 
         <div class="Containers">
-          <img src="../assets/angry-birds-resize.jpg" class="img-size" />
+          <img src="../assets/weather-resize.jpg" class="img-size" />
           <div class="Info">Third Caption</div>
         </div>
 
@@ -55,26 +83,45 @@
       <br />
 
       <!--Intro Page-->
-      <h1 class="cover-heading">Place heading name</h1>
 
-      <div class = "body-container">
-          <tr>
-            <ul class = "body-list">
-                <li>
-                    <div>
-                        <img class="round-image" src="https://via.placeholder.com/150">
-                    </div>
-                </li>
-            </ul>
-          </tr> 
+      <div class="tab">
+        <button class="tablinks" onclick="PlayersStats(event, 'NBA')">
+          NBA
+        </button>
+        <button class="tablinks" onclick="PlayersStats(event, 'NFL')">
+          NFL
+        </button>
+        <button class="tablinks" onclick="PlayersStats(event, 'MLB')">
+          MLB
+        </button>
       </div>
 
+      <div id="NBA" class="tabcontent">
+        <div id="NBAPlayerStatsOutput">
+          <h3>NBA</h3>
+          <p>NBA players stats</p>
+        </div>
+      </div>
+
+      <div id="NFL" class="tabcontent">
+        <h3>NFL</h3>
+        <p>NFL players stats</p>
+      </div>
+
+      <div id="MLB" class="tabcontent">
+        <h3>MLB</h3>
+        <p>MLB players stats</p>
+      </div>
+
+      <!--Quick Summary of weather-->
+      <button id="fetchWeatherDataBtn">Fetch User Data</button>
+      <div id="response"></div>
+
       <script src="../JavaScripts/index.js"></script>
+
+      <!--<script src="../JavaScripts/weather.js"></script>-->
     </body>
   </main>
 
-
-  <article>
-
-  </article>
+  <article></article>
 </html>
