@@ -5,13 +5,13 @@ document
 async function fetchNBAData() {
   await fetch("https://www.balldontlie.io/api/v1/games")
     .then((res) => res.json())
-    .then((playerStats) => {
-        //let arrayLength = playerStats.data.length;
+    .then((GameStats) => {
+        //let arrayLength = GameStats.data.length;
         //console.log(arrayLength)
         let output = "<h2>output</h2>";
-        for (let i = 0; i < playerStats.data.length; i++) {
-          let home_team_score = playerStats.data[i]["home_team_score"];
-          let home_team_full_name = playerStats.data[i]["home_team"]["full_name"];
+        for (let i = 0; i < GameStats.data.length; i++) {
+          let home_team_score = GameStats.data[i]["home_team_score"];
+          let home_team_full_name = GameStats.data[i]["home_team"]["full_name"];
           output += `<ul>
                       <li>${home_team_score}</li>
                       <li>Full Name: ${home_team_full_name}</li>
