@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/index.css" type="text/css" />
+    <title>Document</title>
+  </head>
+
+  <header class="navbar">
+    <nav>
+      <ul>
+        <li class="navbar-text"><a href="/Screens/Index.html">Home</a></li>
+        <li class="navbar-text"><a href="./NBA.html">NBA</a></li>
+        <li class="navbar-text"><a href="./NFL.html">NFL</a></li>
+        <li class="navbar-text"><a href="./MLB.html">MLB</a></li>
+        <li class="navbar-text"><a href="./Contact.html">Contact</a></li>
+        <li class="navbar-text"><a href="./bootstrap.html">bootstrap</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="quicklink">
+      <!--Quick Link-->
+      <nav>
+        <ul>
+          <li class="navbar-text">
+            <a href="https://www.youtube.com/watch?v=9KGzuckZ04c"
+              ><h5 class="quicklink-header">PODCAST:</h5>
+              NBA Podcast </a
+            >|
+          </li>
+          <li class="navbar-text">
+            <a href="./Crypto.html"
+              ><h5 class="quicklink-header">TRENDING:</h5>
+              5-5 pickup
+            </a>
+            |
+          </li>
+          <li class="navbar-text"><a href="./Contact.html">'Foo'</a> |</li>
+          <li class="navbar-text"><a href="./Weather.html">Bar</a> |</li>
+        </ul>
+      </nav>
+    </div>
+
+    <br />
+
+    <body class="text-center">
+      <!-- Slideshow container -->
+      <div class="slideshow-container fade">
+        <!-- Full images with numbers and message Info -->
+        <div class="Containers">
+          <img src="../assets/nba-logo-resize.jpg" class="img-size" />
+          <div class="Info">NBA Playoff</div>
+        </div>
+
+        <div class="Containers">
+          <img src="../assets/louisville-images-resize.jpg" class="img-size" />
+          <div class="Info">Second Caption</div>
+        </div>
+
+
+        <!-- Back and forward buttons -->
+        <a class="Back" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="forward" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br />
+
+      <!-- The circles/dots -->
+      <div style="text-align: center">
+        <span class="dots" onclick="currentSlide(1)"></span>
+        <span class="dots" onclick="currentSlide(2)"></span>
+      </div>
+
+      <br />
+
+      <!--Intro Page-->
+
+      <div class="tab">
+        <button class="tablinks" onclick="PlayersStats(event, 'NBA')">
+          NBA
+        </button>
+        <button class="tablinks" onclick="PlayersStats(event, 'NFL')">
+          NFL
+        </button>
+        <button class="tablinks" onclick="PlayersStats(event, 'MLB')">
+          MLB
+        </button>
+      </div>
+
+      <div id="NBA" class="tabcontent">
+        <div id="NBAPlayerStatsOutput">
+          <h3>NBA</h3>
+          <p>NBA players stats</p>
+        </div>
+      </div>
+
+      <div id="NFL" class="tabcontent">
+        <h3>NFL</h3>
+        <p>NFL players stats</p>
+      </div>
+
+      <div id="MLB" class="tabcontent">
+        <h3>MLB</h3>
+        <p>MLB players stats</p>
+      </div>
+
+      <script src="../JavaScripts/index.js"></script>
+
+      <!--<script src="../JavaScripts/weather.js"></script>-->
+    </body>
+  </main>
+
+  <article></article>
+</html>
