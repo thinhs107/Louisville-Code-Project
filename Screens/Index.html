@@ -5,14 +5,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.83.1">
     <title>Code Louisville Project</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/cover/">
 
     <!--Developer CSS-->
-    <link rel="stylesheet" href="../css/index.css" type="text/css" />
+    <link rel="stylesheet" href="../css/cover.css" type="text/css" />
     <!-- Bootstrap core CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <!-- Favicons -->
@@ -42,14 +41,14 @@
   </head>
   <body class="d-flex h-100 text-center text-white bg-dark">
 
-<div class="splash">
+<!--<div class="splash">
   <h1 class="fade-in">Welcome to My Website</h1>
-</div>    
+</div>   --> 
 
 <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
   <header class="mb-auto">
     <div>
-      <h3 class="float-md-start mb-0">CL - Sports Project</h3>
+      <h3 class="float-md-start mb-0">CL- Sports</h3>
       <nav class="nav nav-masthead justify-content-center float-md-end">
         <a class="nav-link active" aria-current="page" href="/Screens/Index.html">Home</a>
         <a class="nav-link" href="./NBA.html">NBA</a>
@@ -69,6 +68,7 @@
       <a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Learn more</a>
     </p>
 
+
          <!--Intro Page-->
 
          <div class="tab">
@@ -84,25 +84,43 @@
           </div>
     
           <div id="NBA" class="tabcontent">
-            <div id="NBAPlayerStatsOutput">
-              <h3>NBA</h3>
-              <p>NBA players stats</p>
-            </div>
+             <!--Drop Down--> 
+             <div class = "dropdown">
+              <button onclick="PlayersStatDropDown()" class = "dropbtn">Leader Stat</button>
+              <div id = "NBADropdown" class="dropdown-content">
+                <br/>
+                <button onclick="loadStats('PTS')" class="btn btn-success">Point Per Games</button>
+                <button onclick="loadStats('REB')" class="btn btn-success">Rebound</button>
+                <button onclick="loadStats('AST')" class="btn btn-success">Assits</button>  
+              </div>
+            </div>                              
+            <div id="NBAPlayerStatsPPT"></div>
+                      
+          <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+            <div class="btn-group me-2" role="group" aria-label="First group">
+              <button type="button" class="btn btn-primary" onclick="topPlayers(this.id)" id='top05'>05</button>
+              <button type="button" class="btn btn-primary" onclick="topPlayers(this.id)" id='top10'>10</button>
+              <button type="button" class="btn btn-primary" onclick="topPlayers(this.id)" id='top15'>15</button>
+              <button type="button" class="btn btn-primary" onclick="topPlayers(this.id)" id='top20'>20</button>
+
+            </div>          
           </div>
+
+
     
           <div id="NFL" class="tabcontent">
             <h3>NFL</h3>
-            <p>NFL players stats</p>
+            <p>NFL players stats</p>            
           </div>
     
           <div id="MLB" class="tabcontent">
             <h3>MLB</h3>
             <p>MLB players stats</p>
           </div>
-    
-          <script src="../JavaScripts/index.js"></script>
-  </main>
 
+
+  </main>
+  <script src="../JavaScripts/index.js"></script>
   <footer class="mt-auto text-white-50">
   </footer>
 </div>
