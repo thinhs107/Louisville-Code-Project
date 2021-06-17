@@ -28,10 +28,23 @@
         user-select: none;
       }
 
-      @media (min-width: 768px) {
+      .nba-scores{
+          color: whitesmoke;
+          width: 300px;
+          padding: 10px;
+          margin: 10px;
+          border: solid 1px #ccc;
+      }
+
+
+      @media (min-width: 1080px) {
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
         }
+
+        #output{
+        display: flex;
+    }
       }
     </style>
 
@@ -58,6 +71,14 @@
       </nav>
     </div>
   </header>
+
+  <!--Live Score-->
+  <section>
+    <h3>Live Scores</h3>
+    <button id="fetchUserDataBtn" hidden="hidden">Fetch User Data</button>
+    <div id="output"></div>
+
+  </section>
 
   <br >
 
@@ -121,6 +142,8 @@
 
   </main>
   <script src="../JavaScripts/index.js"></script>
+  <script src="../JavaScripts/NBA.js"></script>
+
   <footer class="mt-auto text-white-50">
   </footer>
 </div>

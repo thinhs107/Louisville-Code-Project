@@ -19,8 +19,8 @@ async function fetchNBAData() {
                       <li>Full Name: ${away_team_full_name} | ${away_team_score}</li>
                     </ul> `*/
             output += `<div class = "nba-scores">
-                      <div>Full Name: ${home_team_abb} | ${home_team_score} </div>
-                      <div>Full Name: ${away_team_abb} | ${away_team_score}</div>
+                      <div>${home_team_abb} | ${home_team_score} </div>
+                      <div>${away_team_abb} | ${away_team_score}</div>
                       </div>
                       `
                     ;
