@@ -8,14 +8,21 @@ async function fetchNBAData() {
     .then((GameStats) => {
         //let arrayLength = GameStats.data.length;
         //console.log(arrayLength)
-        let output = "<h2>output</h2>";
-        for (let i = 0; i < GameStats.data.length; i++) {
+        let output= '';
+        for (let i = 0; i < 5; i++) {
+          let home_team_abb = GameStats.data[i]["home_team"]["abbreviation"];
           let home_team_score = GameStats.data[i]["home_team_score"];
-          let home_team_full_name = GameStats.data[i]["home_team"]["full_name"];
-          output += `<ul>
-                      <li>${home_team_score}</li>
-                      <li>Full Name: ${home_team_full_name}</li>
-                    </ul> `
+          let away_team_abb = GameStats.data[i]["visitor_team"]["abbreviation"];
+          let away_team_score = GameStats.data[i]["visitor_team_score"];
+          /*output += `<ul class = "nba-scores">
+                      <li>Full Name: ${home_team_full_name} | ${home_team_score} </li>
+                      <li>Full Name: ${away_team_full_name} | ${away_team_score}</li>
+                    </ul> `*/
+            output += `<div class = "nba-scores">
+                      <div>Full Name: ${home_team_abb} | ${home_team_score} </div>
+                      <div>Full Name: ${away_team_abb} | ${away_team_score}</div>
+                      </div>
+                      `
                     ;
         }
         console.log(output)

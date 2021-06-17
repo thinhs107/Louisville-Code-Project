@@ -39,13 +39,13 @@ async function loadStats(q) {
           //Create another a function that sort and return top players
           _DESC = 'Point Per Game'
           _STAT = 'PTS'
-          _NBAPlayerStatsOutput = `<h3> Top 5 Leaders in ${_DESC}:</h3>`
+          _NBAPlayerStatsOutput = `<h3> Top ${_TopPlayers} Leaders in ${_DESC}:</h3>`
           _SortValue = sortPlayer(NBAPlayersStats, _STAT)
         }
         if(q === 'REB'){
           _DESC = 'Rebound'
           _STAT = 'REB'
-          _NBAPlayerStatsOutput = `<h3> Top 5 Leaders in ${_DESC}:</h3>`
+          _NBAPlayerStatsOutput = `<h3> Top ${_TopPlayers} Leaders in ${_DESC}:</h3>`
           _SortValue = sortPlayer(NBAPlayersStats, _STAT)
           //console.log(_SortValue);
         }
@@ -53,7 +53,7 @@ async function loadStats(q) {
           _DESC = 'Assits'
           _STAT = 'AST'
           _SortValue = sortPlayer(NBAPlayersStats, _STAT)
-          _NBAPlayerStatsOutput = `<h3> Top 5 Leaders in ${_DESC}:</h3>`
+          _NBAPlayerStatsOutput = `<h3> Top ${_TopPlayers} Leaders in ${_DESC}:</h3>`
         }
         //loop through the JSON files (Get top 5 players only)
         for(let i = 0; i < _TopPlayers; i++){
@@ -73,7 +73,7 @@ async function loadStats(q) {
       })
   };
 
-  
+  //Not working yet
   function topPlayers(id){
     console.log(id)
     let TopPlayers;
@@ -110,14 +110,14 @@ async function loadStats(q) {
   }
 
   //Sort Player
-  function sortPlayer(NBAPlayersStats,STAT){
+ function sortPlayer(NBAPlayersStats,STAT){
     var SortValue = [];
     for(let j = 0; j < NBAPlayersStats.data.length; j++){
       SortValue.push(NBAPlayersStats.data[j])
     }
     //console.log(SortValue);
     SortValue.sort(function (a, b) {
-      return  b[STAT] - a[STAT];
+     return  b[STAT] - a[STAT];
       //console.log(a - b);
     });
     //console.log(SortValue);
