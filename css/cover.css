@@ -58,6 +58,7 @@ body {
   border: 1px solid #ccc;
   background-color: #f1f1f1;
   display: active;
+  text-align: right;
 }
 
 /* Style the buttons inside the tab */
@@ -170,4 +171,64 @@ body {
 .fade-in{
   opacity: 0;
   animation: fadeIn 1s ease-in forwards;
+}
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.nba-scores{
+    color: whitesmoke;
+    width: 300px;
+    padding: 10px;
+    margin: 10px;
+    border: solid 1px #ccc;
+}
+
+@media screen and (min-width: 400px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+
+    #output{
+    display: flex;
+  }
+}
+
+
+@media screen and (min-width: 570px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+
+    #output{
+    display: flex;
+  }
+}
+
+
+@media screen and (min-width: 1024px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+
+    #output{
+    display: flex;
+  }
+  .tab button {
+    background-color: inherit;
+    float: right;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+    text-align: center;
+  }
+
 }
