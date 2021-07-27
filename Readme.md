@@ -12,3 +12,5 @@ The second JavaScript was used to fetch API from a website and display the "curr
 test API for NBA and do not reflect on the current NBA scores)
 
 I also used CSS to customize the layout of the pages.
+
+Note: Only the NBA tab stat work. MLB and NFL tabs is only there for display.
